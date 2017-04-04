@@ -18,14 +18,22 @@ public class basicLinkedListTest {
     }
 
     @Test
-    public void OnInitListIsInitialized() {
-        Assert.assertTrue(_List1.getList() != null);
+    public void OnInitListIsNull() {
+        Assert.assertTrue(_List1.getList() == null);
     }
 
     @Test
-    public void OnInitNextIsNull() {
+    public void AfterInsertionSizeIsOne() {
+        _List1.insert(new linkedListNode<>("Nimrod"));
 
-        Assert.assertTrue(_List1.getList().getNext() == null);
+        Assert.assertTrue(_List1.getCount() == 1);
+    }
+
+    @Test
+    public void AfterInsertionListHasOneElementWithValue() {
+        _List1.insert(new linkedListNode<>("Nimrod"));
+
+        Assert.assertTrue(_List1.getList().getValue().equals("Nimrod"));
     }
 
 }

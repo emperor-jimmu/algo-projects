@@ -4,15 +4,12 @@ package algo;
  * Created by Nimrod on 4/4/2017.
  */
 public class linkedListNode<T> {
-    private linkedListNode _Next;
+    public linkedListNode _Next = null;
+
     private T _Value;
 
-    public linkedListNode getNext() {
-        return _Next;
-    }
-
-    public void setNext(linkedListNode _Next) {
-        this._Next = _Next;
+    public linkedListNode(T value) {
+        this._Value = value;
     }
 
     public T getValue() {
