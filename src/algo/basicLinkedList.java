@@ -9,4 +9,8 @@ public class basicLinkedList<T> {
     public basicLinkedList() {
         this._List = new linkedListNode<>();
     }
+
+    public linkedListNode<T> getList() {
+        return _List;
+    }
 }
