@@ -4,13 +4,10 @@ package algo;
  * Created by Nimrod on 4/4/2017.
  */
 public class basicLinkedList<T> {
-    private linkedListNode<T> _Head = null;
+    public linkedListNode<T> _Head = null;
 
     private int count = 0;
 
-    public linkedListNode<T> getList() {
-        return _Head;
-    }
 
     public int getCount() {
         return count;
@@ -42,5 +39,18 @@ public class basicLinkedList<T> {
 
         // Increment elements counter
         count++;
+    }
+
+    @Override
+    public String toString() {
+        linkedListNode<T> headNode = _Head;
+        StringBuffer output = new StringBuffer();
+
+        while (headNode != null) {
+            output.append("Node - " + headNode.getValue() + ", Next - " + headNode._Next + "\n");
+            headNode = headNode._Next;
+        }
+
+        return output.toString();
     }
 }
